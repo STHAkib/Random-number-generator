@@ -1,0 +1,15 @@
+#include <iostream>
+#include <random>
+
+using namespace std;
+
+int main() {
+   random_device num;
+   mt19937 gen(num());
+
+   uniform_int_distribution<int> dist(1, 100);
+
+   cout << dist(gen) << '\n';
+
+   return 0;
+}
